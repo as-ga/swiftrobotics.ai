@@ -2,7 +2,7 @@ import ReportForm from "@/components/ReportForm";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen">
       <div className="max-w-5xl mx-auto py-12 px-6">
         <h1 className="text-4xl font-bold mb-2">
           Fashion News Monitoring Agent
