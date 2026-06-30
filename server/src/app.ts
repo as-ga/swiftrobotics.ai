@@ -18,7 +18,7 @@ app.use(express.json());
 // app.use(cookieParser());
 
 app.get("/", (_, res) => {
-  res.json({ message: "Welcome to the Lead Flow API" });
+  res.json({ message: "Welcome to the Swift Robotics API" });
 });
 
 app.get("/api/health", (_, res) => {

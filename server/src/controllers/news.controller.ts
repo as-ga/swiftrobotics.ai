@@ -7,6 +7,13 @@ import { summarizeNews } from "@/services/ai.service";
 const generateReport = asyncHandler(async (req, res) => {
   const { country, topics } = req.body;
 
+  if (!country || !topics || !Array.isArray(topics) || topics.length === 0) {
+    throw new ApiError(
+      400,
+      "Invalid request body. 'country' and 'topics' are required."
+    );
+  }
+
   const articles = await getNews(country, topics);
 
   const report = await summarizeNews(articles);
