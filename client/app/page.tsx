@@ -1,10 +1,18 @@
+import ReportForm from "@/components/ReportForm";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <h1 className="text-4xl font-bold text-center mb-8">
-          Welcome to Swiftrobotics
+    <main className="min-h-screen bg-gray-50">
+      <div className="max-w-5xl mx-auto py-12 px-6">
+        <h1 className="text-4xl font-bold mb-2">
+          Fashion News Monitoring Agent
         </h1>
+
+        <p className="text-gray-600 mb-10">
+          Generate AI-powered summaries of the latest fashion and retail news.
+        </p>
+
+        <ReportForm />
       </div>
     </main>
   );
