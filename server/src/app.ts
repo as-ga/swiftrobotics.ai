@@ -1,19 +1,19 @@
 import express, { Application } from "express";
 // import cookieParser from "cookie-parser";
-// import env from "@/config/env";
-// import cors from "cors";
+import env from "@/config/env";
+import cors from "cors";
 
 const app: Application = express();
 
 /* ================== Global Middleware ================== */
-// app.use(
-//   cors({
-//     origin: env.clientURL,
-//     credentials: true,
-//     allowedHeaders: ["Content-Type", "Authorization"],
-//     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-//   })
-// );
+app.use(
+  cors({
+    origin: env.clientURL,
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+  })
+);
 app.use(express.json());
 // app.use(cookieParser());
 
